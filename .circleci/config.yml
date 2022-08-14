@@ -37,10 +37,17 @@ jobs:
           name: Front-End Build
           command: |
             npm run frontend:build 
+      # TODO: test the frontend app
+      - run:
+          name: Front-End Build
+          command: |
+            npm run frontend:test 
+      # TODO: build the api
       - run:
           name: API Build
           command: |
-            npm run api:build    
+            npm run api:build   
+      # TODO: deploy the application 
       - run:
           name: App Deploy
           command: |
