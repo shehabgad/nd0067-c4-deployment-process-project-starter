@@ -17,8 +17,7 @@ jobs:
           node-version: '14.15'
       - eb/setup
       - aws-cli/setup  
-      - browser-tools/install-chrome
-      - browser-tools/install-chromedriver     
+      - browser-tools/install-browser-tools 
       - checkout
       # Use root level package.json to install dependencies in the frontend app
       - run:
@@ -42,7 +41,7 @@ jobs:
             npm run frontend:build 
       # TODO: test the frontend app
       - run:
-          name: Front-End Build
+          name: Front-End test
           command: |
             npm run frontend:test 
       # TODO: build the api
