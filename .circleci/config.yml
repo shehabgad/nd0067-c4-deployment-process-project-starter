@@ -41,6 +41,5 @@ jobs:
             npm run api:build
       - run:
          name: Deploy App
-        # TODO: Install, build, deploy in both apps
-        command: |
+         command: |
             echo "# TODO: Install, build, deploy in both apps"         
